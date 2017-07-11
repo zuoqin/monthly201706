@@ -12,8 +12,17 @@
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
-                <script src="js/Chart.bundle.js"></script>
-                <script src="js/utils.js"></script>                
+                <!-- Load c3.css -->
+                <link href="css/c3.css" rel="stylesheet">                
+
+                <!--
+                <script src="js/Chart.bundle.js"></script>                
+                <script src="js/utils.js"></script>
+                -->
+
+                <script src="js/d3.v3.min.js" charset="utf-8"></script>
+                <script src="js/c3.js"></script>
+                
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -27,11 +36,57 @@
 		<div class="reveal">
 			<div class="slides">
 
+                          <section>
+                            <img src="images/slide1.jpg" alt="Mountain View" style="width:500px;height:700px;">
+                          </section>
+                          <section>
+                            <table class="reveal">
+                              <tr>
+                                <td vertical-align="middle" valign="middle" height="50px">
+                                  <h6>СОДЕРЖАНИЕ</h6>
+                                </td>
 
+                                <td height="50px" vertical-align="middle" valign="middle" style="text-align:right;">
+                                  <img src="images/sberbankpb_header.png" alt="Mountain View" style="width:112px;height:32px;">
+                                </td>                                
+                              </tr>
+                            </table>
+                            <p style="font-size:14px">В этом выпуске</p>
+                            <ul>
+                              <li style="font-size:12px"><a href="#/slide1">Обзор глобальных рынков</a>
+                                <ul>
+                                  <li style="font-size:12px"><a href="#/slide1-1">Акции: новые исторические максимумы индекса S&P 500</a></li>
+                                  <li style="font-size:12px"><a href="#/slide1-2">Облигации: снижение доходности казначейских облигаций США вопреки решению ФРС</a></li>
+                                  <li style="font-size:12px"><a href="#/slide2-1">Сырьевые рынки: возобновление падения нефтяных котировок</a></li>
+                                  <li style="font-size:12px"><a href="#/slide2-2">Валюты: «суперчетверг» и последовавшее ослабление евро и фунта</a></li>                                  
+                                </ul>
+                              </li>
+
+                              <li style="font-size:12px"><a href="#/slide3">Глобальные макроэкономические тенденции</a>
+                                <ul>
+                                  <li style="font-size:12px"><a href="#/slide3-1">Федрезерв наметил план по сокращению баланса</a></li>
+                                </ul>
+                              </li>
+
+                              <li style="font-size:12px"><a href="#/slide4">Глобальная инвестиционная стратегия</a>
+                                <ul>
+                                  <li style="font-size:12px"><a href="#/slide4-1">«Дорогие» рынки диктуют избирательный подход</a></li>
+                                </ul>
+                              </li>
+
+                              <li style="font-size:12px"><a href="#/slide5">Глобальные инвестиционные идеи</a>
+                                <ul>
+                                  <li style="font-size:12px"><a href="#/slide5-2">Покупка акций золотодобывающих и металлургических компаний с помощью структурных продуктов</a></li>
+                                </ul>
+                              </li>                              
+                            </ul>
+                          </section>
+
+                          
                           <!-- ОБЗОР ГЛОБАЛЬНЫХ РЫНКОВ: АКЦИИ И ОБЛИГАЦИИ -->
 
-			  <section>
-                            <section>
+			  <section id="slide1">
+                            <section id="slide1-1">
 
                               <table class="reveal">
                                 <tr>
@@ -71,7 +126,7 @@
                                 </tr>
                               </table>
                             </section>
-                            <section>
+                            <section id="slide1-2">
                               <table class="reveal">
                                 <tr>
                                   <td vertical-align="middle" valign="middle" height="50px">
@@ -115,8 +170,8 @@
 
                           <!-- ОБЗОР ГЛОБАЛЬНЫХ РЫНКОВ: СЫРЬЕВЫЕ РЫНКИ И ВАЛЮТЫ -->
 
-			  <section>
-                            <section>
+			  <section id="slide2">
+                            <section id="slide2-1">
 
                               <table class="reveal">
                                 <tr>
@@ -153,7 +208,7 @@
                                 </tr>
                               </table>
                             </section>
-                            <section>
+                            <section id="slide2-2">
                               <table class="reveal">
                                 <tr>
                                   <td vertical-align="middle" valign="middle" height="50px">
@@ -212,321 +267,370 @@
                           </section>                                
 
 
-
+                          <!-- ГЛОБАЛЬНЫЕ МАКРОЭКОНОМИЧЕСКИЕ ТЕНДЕНЦИИ -->
                           
-			  <section>
-                            <table class="reveal">
-                              <tr>
-                                <td vertical-align="middle" valign="middle" height="50px">
-                                  <h6 font-size: 50%;>ГЛОБАЛЬНЫЕ МАКРОЭКОНОМИЧЕСКИЕ ТЕНДЕНЦИИ</h6>
-                                </td>
+			  <section id="slide3">
+                            <section id="slide3-1">
+                              <table class="reveal">
+                                <tr>
+                                  <td vertical-align="middle" valign="middle" height="50px">
+                                    <h6 font-size: 50%;>ГЛОБАЛЬНЫЕ МАКРОЭКОНОМИЧЕСКИЕ ТЕНДЕНЦИИ</h6>
+                                  </td>
 
-                                <td height="50px" vertical-align="middle" valign="middle" style="text-align:right;">
-                                  <img src="images/sberbankpb_header.png" alt="Mountain View" style="width:112px;height:32px;">
-                                </td>                                
-                              </tr>
-
-
-                              <tr>
-                                <td width="50%" style="border-bottom:white;">
-                                  <table class="reveal">
-                                    <tr>
-                                      <td style="border-bottom:white;">
-                                        <div style="font-size:x-large;background-color:RGB(195, 112, 96);">Федрезерв наметил план по сокращению баланса</div>
-                                      </td>                                      
-                                    </tr>                                    
-                                    <tr>
-                                      <td style="border-bottom:white;">
-                                        <div style="font-size:medium;">Оценка роста американской экономики в первом квартале была пересмотрена вверх; ФРС повысила процентные ставки </div>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td style="border-bottom:white;">
-                                        <div style="font-size:medium">Экономические показатели в еврозоне улучшаются, но ЕЦБ не торопится ужесточать денежно-кредитную политику.</div>
-                                      </td>                                      
-                                    </tr>
-                                  </table>                                  
-                                </td>
+                                  <td height="50px" vertical-align="middle" valign="middle" style="text-align:right;">
+                                    <img src="images/sberbankpb_header.png" alt="Mountain View" style="width:112px;height:32px;">
+                                  </td>                                
+                                </tr>
 
 
+                                <tr>
+                                  <td width="50%" style="border-bottom:white;">
+                                    <table class="reveal">
+                                      <tr>
+                                        <td style="border-bottom:white;">
+                                          <div style="font-size:x-large;background-color:RGB(195, 112, 96);">Федрезерв наметил план по сокращению баланса</div>
+                                        </td>                                      
+                                      </tr>                                    
+                                      <tr>
+                                        <td style="border-bottom:white;">
+                                          <div style="font-size:medium;">Оценка роста американской экономики в первом квартале была пересмотрена вверх; ФРС повысила процентные ставки </div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td style="border-bottom:white;">
+                                          <div style="font-size:medium">Экономические показатели в еврозоне улучшаются, но ЕЦБ не торопится ужесточать денежно-кредитную политику.</div>
+                                        </td>                                      
+                                      </tr>
+                                    </table>                                  
+                                  </td>
 
-                                <td width="50%" style="border-bottom:white;"><canvas id="canvas" width="100px" height="100px"></canvas></td>                                
-                              </tr>
+                                  <td width="50%" style="border-bottom:white;"><div id="fedbalance" width="100px" height="100px"></div></td>
+                                  <!--
+                                  <td width="50%" style="border-bottom:white;"><canvas id="canvas" width="100px" height="100px"></canvas></td> -->
+                                  
+                                </tr>
 
-                              
-                              <tr>
-                                <td width="50%" style="border-bottom:white;"></td>
-                                <td width="50%" style="text-align:center;"><h6>Источник: Bloomberg</h6></td>
-                              </tr>
+                                
+                                <tr>
+                                  <td width="50%" style="border-bottom:white;"></td>
+                                  <td width="50%" style="text-align:center;"><h6>Источник: Bloomberg</h6></td>
+                                </tr>
 
-                              <tr>
-                                <td width="50%">
+                                <tr>
+                                  <td width="50%">
 
-                                </td>
-
-
-                              </tr>                            
-
-                            </table>
-                                </section>                                
-				<section>
-                                  <table class="reveal">
-                                    <tr>
-                                      <td vertical-align="middle" valign="middle" height="50px">
-                                        <h6 font-size: 50%;>ГЛОБАЛЬНЫЕ МАКРОЭКОНОМИЧЕСКИЕ ТЕНДЕНЦИИ</h6>
-                                      </td>
-
-                                      <td height="50px" vertical-align="middle" valign="middle" style="text-align:right;">
-                                        <img src="images/sberbankpb_header.png" alt="Mountain View" style="width:112px;height:32px;">
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td width="50%">
-                                        <table class="reveal">
-                                          <tr>
-                                            <td><h5 style="font-size:14px">США</h5>
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <td><p style="font-size: 12px;">Темп роста ВВП США в I квартале 2017 года к IV кварталу 2016 года был пересмотрен в большую сторону и составил 1,2% в годовом выражении (согласно второй оценке). Некоторое разочарование принесли слабые данные по рынку труда за май – было создано «всего» 138 тыс. рабочих мест, однако никакого влияния ни эти данные, ни данные по инфляции на июньское решение ФРС не оказали. Как и ожидалось, регулятор поднял ставку на 0,25% и заложил в свой прогноз еще одно повышение до конца года. Также монетарные власти наметили план по сокращению баланса, который в настоящее время составляет $4,5 трлн. Баланс будет снижаться на $10 млрд в месяц за счет погашения активов; далее темпы сокращения баланса будут наращиваться на $10 млрд. в квартал.</p>
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <td>
-                                              <h5 style="font-size:14px">Еврозона</h5>
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <td><p style="font-size:12px">Согласно финальной оценке, темп роста ВВП еврозоны в I квартале 2017 года к аналогичному периоду годом ранее составил 1,9%. Финальные индексы деловой активности в еврозоне за май также подтвердили, что восстановление экономики в регионе набирает обороты. ЕЦБ никаких изменений в свою политику не вносил, однако в комментариях исчезла фраза, указывающая на возможное снижение процентных ставок, если будет необходимо. Таким образом, как рынок и предполагал, текущие процентные ставки являются минимальными.</p>
-                                            </td>
-                                          </tr>
-                                        </table>                               
-                                      </td>
-                                      <td width="50%">
-                                        <table class="reveal">
-                                          <tr>
-                                            <td><h5 style="font-size:14px">Великобритания</h5>
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <td>
-                                              <p style="font-size:12px">Темп роста ВВП США в I квартале 2017 года к IV кварталу 2016 года был пересмотрен в большую сторону и составил 1,2% в годовом выражении (согласно второй оценке). Некоторое разочарование принесли слабые данные по рынку труда за май – было создано «всего» 138 тыс. рабочих мест, однако никакого влияния ни эти данные, ни данные по инфляции на июньское решение ФРС не оказали. Как и ожидалось, регулятор поднял ставку на 0,25% и заложил в свой прогноз еще одно повышение до конца года. Также монетарные власти наметили план по сокращению баланса, который в настоящее время составляет $4,5 трлн. Баланс будет снижаться на $10 млрд в месяц за счет погашения активов; далее темпы сокращения баланса будут наращиваться на $10 млрд. в квартал.</p>
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <td>
-                                              <h5 style="font-size:14px">Развивающиеся страны</h5>
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <td>
-                                              <p style="font-size:12px">Согласно финальной оценке, темп роста ВВП еврозоны в I квартале 2017 года к аналогичному периоду годом ранее составил 1,9%. Финальные индексы деловой активности в еврозоне за май также подтвердили, что восстановление экономики в регионе набирает обороты. ЕЦБ никаких изменений в свою политику не вносил, однако в комментариях исчезла фраза, указывающая на возможное снижение процентных ставок, если будет необходимо. Таким образом, как рынок и предполагал, текущие процентные ставки являются минимальными.
-                                              </p>
-                                            </td>
-                                         </tr>                                                                              
-                                        </table>                                                                              
-                                      </td>
-                                    </tr>
-                                  </table>
-
-                                </section>
-			        <section>
-                                  <table class="reveal">
-                                    <tr>
-                                      <td vertical-align="middle" valign="middle" height="50px">
-                                        <h6>ГЛОБАЛЬНАЯ ИНВЕСТИЦИОННАЯ СТРАТЕГИЯ</h6>
-                                      </td>
-
-                                      <td height="50px" vertical-align="middle" valign="middle" style="text-align:right;">
-                                        <img src="images/sberbankpb_header.png" alt="Mountain View" style="width:112px;height:32px;">
-                                      </td>                                
-                                    </tr>
+                                  </td>
 
 
-                                    <tr>
-                                      <td width="50%" style="border-bottom:white;">
-                                        <table class="reveal">
-                                          <tr>
-                                            <td style="border-bottom:white;">
-                                              <div style="font-size:x-large;background-color:RGB(91, 135, 154);">«Дорогие» рынки диктуют избирательный подход</div>
-                                            </td>                                      
-                                          </tr>                                    
-                                          <tr>
-                                            <td style="border-bottom:white;">
-                                              <div style="font-size:medium;">Рынки акций развитых стран уже достаточно дорогие. Поэтому мы делаем акцент на инвестиционные идеи, которые могут «сыграть» и в случае просадки рынка (в частности, структурные продукты). </div>
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <td style="border-bottom:white;">
-                                              <div style="font-size:medium">Сегмент долларовых облигаций развивающихся стран в целом тоже не выглядит дешевым, поэтому мы также придерживаемся избирательного подхода.</div>
-                                            </td>                                      
-                                          </tr>
-                                        </table>                                  
-                                      </td>
+                                </tr>                            
+
+                              </table>                              
+                            </section>
+
+			    <section id="slide3-2">
+                              <table class="reveal">
+                                <tr>
+                                  <td vertical-align="middle" valign="middle" height="50px">
+                                    <h6 font-size: 50%;>ГЛОБАЛЬНЫЕ МАКРОЭКОНОМИЧЕСКИЕ ТЕНДЕНЦИИ</h6>
+                                  </td>
+
+                                  <td height="50px" vertical-align="middle" valign="middle" style="text-align:right;">
+                                    <img src="images/sberbankpb_header.png" alt="Mountain View" style="width:112px;height:32px;">
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td width="50%">
+                                    <table class="reveal">
+                                      <tr>
+                                        <td><h5 style="font-size:14px">США</h5>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td><p style="font-size: 12px;">Темп роста ВВП США в I квартале 2017 года к IV кварталу 2016 года был пересмотрен в большую сторону и составил 1,2% в годовом выражении (согласно второй оценке). Некоторое разочарование принесли слабые данные по рынку труда за май – было создано «всего» 138 тыс. рабочих мест, однако никакого влияния ни эти данные, ни данные по инфляции на июньское решение ФРС не оказали. Как и ожидалось, регулятор поднял ставку на 0,25% и заложил в свой прогноз еще одно повышение до конца года. Также монетарные власти наметили план по сокращению баланса, который в настоящее время составляет $4,5 трлн. Баланс будет снижаться на $10 млрд в месяц за счет погашения активов; далее темпы сокращения баланса будут наращиваться на $10 млрд. в квартал.</p>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <h5 style="font-size:14px">Еврозона</h5>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td><p style="font-size:12px">Согласно финальной оценке, темп роста ВВП еврозоны в I квартале 2017 года к аналогичному периоду годом ранее составил 1,9%. Финальные индексы деловой активности в еврозоне за май также подтвердили, что восстановление экономики в регионе набирает обороты. ЕЦБ никаких изменений в свою политику не вносил, однако в комментариях исчезла фраза, указывающая на возможное снижение процентных ставок, если будет необходимо. Таким образом, как рынок и предполагал, текущие процентные ставки являются минимальными.</p>
+                                        </td>
+                                      </tr>
+                                    </table>                               
+                                  </td>
+                                  <td width="50%">
+                                    <table class="reveal">
+                                      <tr>
+                                        <td><h5 style="font-size:14px">Великобритания</h5>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <p style="font-size:12px">Темп роста ВВП США в I квартале 2017 года к IV кварталу 2016 года был пересмотрен в большую сторону и составил 1,2% в годовом выражении (согласно второй оценке). Некоторое разочарование принесли слабые данные по рынку труда за май – было создано «всего» 138 тыс. рабочих мест, однако никакого влияния ни эти данные, ни данные по инфляции на июньское решение ФРС не оказали. Как и ожидалось, регулятор поднял ставку на 0,25% и заложил в свой прогноз еще одно повышение до конца года. Также монетарные власти наметили план по сокращению баланса, который в настоящее время составляет $4,5 трлн. Баланс будет снижаться на $10 млрд в месяц за счет погашения активов; далее темпы сокращения баланса будут наращиваться на $10 млрд. в квартал.</p>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <h5 style="font-size:14px">Развивающиеся страны</h5>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <p style="font-size:12px">Согласно финальной оценке, темп роста ВВП еврозоны в I квартале 2017 года к аналогичному периоду годом ранее составил 1,9%. Финальные индексы деловой активности в еврозоне за май также подтвердили, что восстановление экономики в регионе набирает обороты. ЕЦБ никаких изменений в свою политику не вносил, однако в комментариях исчезла фраза, указывающая на возможное снижение процентных ставок, если будет необходимо. Таким образом, как рынок и предполагал, текущие процентные ставки являются минимальными.
+                                          </p>
+                                        </td>
+                                      </tr>                                                                              
+                                    </table>                                                                              
+                                  </td>
+                                </tr>
+                              </table>
+
+                            </section>                            
+
+                          </section>                                
+
+                          <!-- ГЛОБАЛЬНАЯ ИНВЕСТИЦИОННАЯ СТРАТЕГИЯ -->
+                          
+                          <section id="slide4">
+			    <section id="slide4-1">
+                              <table class="reveal">
+                                <tr>
+                                  <td vertical-align="middle" valign="middle" height="50px">
+                                    <h6>ГЛОБАЛЬНАЯ ИНВЕСТИЦИОННАЯ СТРАТЕГИЯ</h6>
+                                  </td>
+
+                                  <td height="50px" vertical-align="middle" valign="middle" style="text-align:right;">
+                                    <img src="images/sberbankpb_header.png" alt="Mountain View" style="width:112px;height:32px;">
+                                  </td>                                
+                                </tr>
+
+
+                                <tr>
+                                  <td width="50%" style="border-bottom:white;">
+                                    <table class="reveal">
+                                      <tr>
+                                        <td style="border-bottom:white;">
+                                          <div style="font-size:x-large;background-color:RGB(91, 135, 154);">«Дорогие» рынки диктуют избирательный подход</div>
+                                        </td>                                      
+                                      </tr>                                    
+                                      <tr>
+                                        <td style="border-bottom:white;">
+                                          <div style="font-size:medium;">Рынки акций развитых стран уже достаточно дорогие. Поэтому мы делаем акцент на инвестиционные идеи, которые могут «сыграть» и в случае просадки рынка (в частности, структурные продукты). </div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td style="border-bottom:white;">
+                                          <div style="font-size:medium">Сегмент долларовых облигаций развивающихся стран в целом тоже не выглядит дешевым, поэтому мы также придерживаемся избирательного подхода.</div>
+                                        </td>                                      
+                                      </tr>
+                                    </table>                                  
+                                  </td>
 
 
 
-                                      <td width="50%" style="border-bottom:white;"><canvas id="eurousaeq" width="100px" height="100px"></canvas></td>                                
-                                    </tr>
-
+                                  <td width="50%" style="border-bottom:white;">
+                                    <table>
+                                      <tr>
+                                        <td>
+                                          <p style="font-size: 16px;text-align: center;">Динамика за последние пять лет</p>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <div id="useurostocks" width="100px" height="100px"></div>
+                                        </td>
+                                      </tr>
+                                    </table>
                                     
-                                    <tr>
-                                      <td width="50%" style="border-bottom:white;"></td>
-                                      <td width="50%" style="text-align:center;"><h6>Источник: Bloomberg</h6></td>
-                                    </tr>
+                                  </td>
+                                </tr>
 
-                                    <tr>
-                                      <td width="50%">
+                                
+                                <tr>
+                                  <td width="50%" style="border-bottom:white;"></td>
+                                  <td width="50%" style="text-align:center;"><h6>Источник: Bloomberg</h6></td>
+                                </tr>
 
-                                      </td>
+                                <tr>
+                                  <td width="50%">
 
-
-                                    </tr>                            
-
-                                  </table>
-                                </section>
+                                  </td>
 
 
+                                </tr>                            
+
+                              </table>
+                            </section>
+
+
+			    <section id="slide4-2">
+                              <table class="reveal">
+                                <tr>
+                                  <td vertical-align="middle" valign="middle" height="50px">
+                                    <h6 font-size: 50%;>ГЛОБАЛЬНЫЕ МАКРОЭКОНОМИЧЕСКИЕ ТЕНДЕНЦИИ</h6>
+                                  </td>
+
+                                  <td height="50px" vertical-align="middle" valign="middle" style="text-align:right;">
+                                    <img src="images/sberbankpb_header.png" alt="Mountain View" style="width:112px;height:32px;">
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td width="50%">
+                                    <table class="reveal">
+                                      <tr>
+                                        <td><h5 style="font-size:16px">Акции (развитые страны)</h5>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <p style="font-size: 14px;">Мы уже упоминали, что акции развитых стран проигнорировали риски в виде падения нефтяных котировок и запуска формальных переговоров о Brexit и продолжили движение вверх. На наш взгляд, в текущие ценовые уровни уже заложены позитивные ожидания, поэтому покупать широкие индексы уже поздно.</p>
+                                          <p style="font-size: 14px;"> Поэтому мы либо «заходим» в акции отдельных компаний, когда есть какие-то специфические истории, либо делаем фокус на инвестиционные идеи, которые могут «сыграть» и в случае просадки рынка. В первом случае мы смотрим, например, на просевшие акции компаний-ритейлеров. Во втором случае одной из инвестиционных идей является ставка на опережающую динамику европейских акций по сравнению с американскими акциями в среднесрочной перспективе.</p>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <h5 style="font-size:16px">Акции (развивающиеся страны)</h5>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td><p style="font-size:14px">Мы по-прежнему позитивно оцениваем перспективы акций развивающихся стран в среднесрочной перспективе, однако после сильного роста широкого индекса с начала года потенциал роста в краткосрочной перспективе представляется нам ограниченным. Опять же бросается в глаза значительное расхождение динамики между странами. Мексиканский и турецкий индексы сильно прибавили, отыграв потери конца прошлого года, в то время как российский рынок акций зафиксировал потери и, на наш взгляд, выглядит сейчас недооцененным.</p>
+                                        </td>
+                                      </tr>
+                                    </table>                               
+                                  </td>
+                                  <td width="50%">
+                                    <table class="reveal">
+                                      <tr>
+                                        <td style="padding-top:0.1em;padding-bottom:0.1em;"><h5 style="font-size:16px">Государственные и корпоративные облигации (развивающиеся страны)</h5>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td style="padding-top:0.1em;padding-bottom:0.1em;">
+                                          <p style="font-size:14px">Спреды по долларовым облигациям развивающихся стран снизились с начала года, а вместе с движением вниз доходностей казначейских облигаций США это привело к общему снижению доходностей и хорошему росту цен облигаций. Снижением доходностей и высоким аппетитом со стороны инвесторов поспешили воспользоваться эмитенты, в том числе суверенные. В июне на рынок вышла РФ с предложением 10-летних и 30-летних бумаг. Хотя размещение произошло уже после введения новых санкций в отношении России, спрос все равно превысил предложение. Но самым показательным было размещение 100-летних долларовых бумаг Аргентиной. Помимо того, что облигации подобной длины несут в себе высокий процентный риск, кредитная история страны небезупречная. Тем не менее спрос более чем в 3,5 раза превысил предложение. Все это свидетельствует, на наш взгляд, уже о некоторой перегретости рынка. Поэтому мы придерживаемся осторожного подхода в выборе инструментов для инвестирования. В большей мере акцент делается на облигации понятного кредитного качества с покупкой к погашению по адекватной доходности или на «специальные» идеи. Примером «специальных» идей в настоящее время являются просевшие облигации нефтегазовых компаний.</p>
+                                        </td>
+                                      </tr>
+                                    </table>                                                                              
+                                  </td>
+                                </tr>
+                              </table>
+
+                            </section>                            
+                            
+                          </section>
+                          <!-- End slide 4 -->
+
+                          <!-- ГЛОБАЛЬНЫЕ ИНВЕСТИЦИОННЫЕ ИДЕИ -->
+                          <section id="slide5">
+			    <section id="slide5-1">
+                              <table class="reveal">
+                                <tr>
+                                  <td vertical-align="middle" valign="middle" height="50px">
+                                    <h6>ГЛОБАЛЬНЫЕ ИНВЕСТИЦИОННЫЕ ИДЕИ</h6>
+                                  </td>
+
+                                  <td height="50px" vertical-align="middle" valign="middle" style="text-align:right;">
+                                    <img src="images/sberbankpb_header.png" alt="Mountain View" style="width:112px;height:32px;">
+                                  </td>                                
+                                </tr>
+                                <tr>
+                                  <td style="padding-top:0.1em;padding-bottom:0.1em;"><h5 style="font-size:16px">Акции нефтегазовых компаний</h5>
+                                  </td>
+                                  <td style="padding-top:0.1em;padding-bottom:0.1em;"><h5 style="font-size:16px">Акции американских банков</h5>
+                                  </td>                                      
+                                  
+                                </tr>
+
+
+                                <tr>
+                                  <td width="50%" style="padding-top:0.1em;padding-bottom:0.1em;border-bottom:white;">
+                                    <p style="font-size:14px">Мы видим интересные дивидендные истории в акциях эмитентов нефтегазового сектора с глобальным присутствием. Внутри сегмента мы выделяем компании со стабильно высоким свободным денежным потоком, который позволяет сохранить и нарастить дивиденды. Падение цен на нефть привело к появлению возможностей для покупки бумаг.</p>
+                                  </td>
+
+                                  <td width="50%" style="padding-top:0.1em;padding-bottom:0.1em;border-bottom:white;">
+                                    <p style="font-size:14px">Позитивная оценка перспектив американской экономики оказывает поддержку котировкам американских банков, хотя и не находит пока отражения в динамике доходности КО США. Обычно рост процентных ставок приводит к увеличению чистой процентной маржи у банков.</p>
+                                  </td>                                      
+
+                                </tr>
+
+                                
+                                <tr>
+                                  <td width="50%" style="border-bottom:white;">
+                                    <img src="images/oilgas.png" alt="Mountain View" style="width:400px;height:254px;">
+                                  </td>
+
+
+                                  <td width="50%" style="border-bottom:white;">
+                                    <img src="images/usbanks.png" alt="Mountain View" style="width:400px;height:254px;">
+                                  </td>
+                                </tr>
+                              </table>
+                            </section>
 
 
 
+			    <section id="slide5-2">
+                              <table class="reveal">
+                                <tr>
+                                  <td vertical-align="middle" valign="middle" height="50px">
+                                    <h6>ГЛОБАЛЬНЫЕ ИНВЕСТИЦИОННЫЕ ИДЕИ</h6>
+                                  </td>
+
+                                  <td height="50px" vertical-align="middle" valign="middle" style="text-align:right;">
+                                    <img src="images/sberbankpb_header.png" alt="Mountain View" style="width:112px;height:32px;">
+                                  </td>                                
+                                </tr>
+                                <tr>
+                                  <td style="padding-top:0.1em;padding-bottom:0.1em;"><h5 style="font-size:16px">Акции золотодобывающих компаний</h5>
+                                  </td>
+                                  <td style="padding-top:0.1em;padding-bottom:0.1em;"><h5 style="font-size:16px">Акции металлургических компаний</h5>
+                                  </td>                                      
+                                  
+                                </tr>
 
 
+                                <tr>
+                                  <td width="50%" style="padding-top:0.1em;padding-bottom:0.1em;border-bottom:white;">
+                                    <p style="font-size:14px">Как мы уже отмечали, цена золота нашла
+                                      техническую поддержку на текущих уровнях. Для нас
+                                      это сигнал к обратной покупке акций
+                                      золотодобывающих компаний. Войти можно либо
+                                      напрямую, либо с помощью инвестиционных
+                                      продуктов, предполагающих защиту капитала.</p>
+                                  </td>
+
+                                  <td width="50%" style="padding-top:0.1em;padding-bottom:0.1em;border-bottom:white;">
+                                    <p style="font-size:14px">Мы предлагаем небольшую часть портфеля акций
+                                      распределить в этот сектор. Падение цен на
+                                      металлы оказало давление на котировки акций
+                                      компаний сектора. Войти можно либо напрямую,
+                                      либо с помощью инвестиционных продуктов,
+                                      предполагающих защиту капитала.</p>
+                                  </td>                                      
+
+                                </tr>
+
+                                
+                                <tr>
+                                  <td width="50%" style="border-bottom:white;">
+                                    <img src="images/goldcorp.png" alt="Mountain View" style="width:400px;height:254px;">
+                                  </td>
 
 
+                                  <td width="50%" style="border-bottom:white;">
+                                    <img src="images/metallurg.png" alt="Mountain View" style="width:400px;height:254px;">
+                                  </td>
+                                </tr>
+                              </table>
+                            </section>
 
 
+                            
+                          </section>
+                          <!-- End slide 5 -->
 
 
-
-
-
-
-
-
-
-				<section>
-                                  <table class="reveal">
-                                    <tr>
-                                      <td vertical-align="middle" valign="middle" height="50px">
-                                        <h6 font-size: 50%;>ГЛОБАЛЬНЫЕ МАКРОЭКОНОМИЧЕСКИЕ ТЕНДЕНЦИИ</h6>
-                                      </td>
-
-                                      <td height="50px" vertical-align="middle" valign="middle" style="text-align:right;">
-                                        <img src="images/sberbankpb_header.png" alt="Mountain View" style="width:112px;height:32px;">
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td width="50%">
-                                        <table class="reveal">
-                                          <tr>
-                                            <td><h5 style="font-size:16px">Акции (развитые страны)</h5>
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <td>
-                                              <p style="font-size: 14px;">Мы уже упоминали, что акции развитых стран проигнорировали риски в виде падения нефтяных котировок и запуска формальных переговоров о Brexit и продолжили движение вверх. На наш взгляд, в текущие ценовые уровни уже заложены позитивные ожидания, поэтому покупать широкие индексы уже поздно.</p>
-                                              <p style="font-size: 14px;"> Поэтому мы либо «заходим» в акции отдельных компаний, когда есть какие-то специфические истории, либо делаем фокус на инвестиционные идеи, которые могут «сыграть» и в случае просадки рынка. В первом случае мы смотрим, например, на просевшие акции компаний-ритейлеров. Во втором случае одной из инвестиционных идей является ставка на опережающую динамику европейских акций по сравнению с американскими акциями в среднесрочной перспективе.</p>
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <td>
-                                              <h5 style="font-size:16px">Акции (развивающиеся страны)</h5>
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <td><p style="font-size:14px">Мы по-прежнему позитивно оцениваем перспективы акций развивающихся стран в среднесрочной перспективе, однако после сильного роста широкого индекса с начала года потенциал роста в краткосрочной перспективе представляется нам ограниченным. Опять же бросается в глаза значительное расхождение динамики между странами. Мексиканский и турецкий индексы сильно прибавили, отыграв потери конца прошлого года, в то время как российский рынок акций зафиксировал потери и, на наш взгляд, выглядит сейчас недооцененным.</p>
-                                            </td>
-                                          </tr>
-                                        </table>                               
-                                      </td>
-                                      <td width="50%">
-                                        <table class="reveal">
-                                          <tr>
-                                            <td style="padding-top:0.1em;padding-bottom:0.1em;"><h5 style="font-size:16px">Государственные и корпоративные облигации (развивающиеся страны)</h5>
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <td style="padding-top:0.1em;padding-bottom:0.1em;">
-                                              <p style="font-size:14px">Спреды по долларовым облигациям развивающихся стран снизились с начала года, а вместе с движением вниз доходностей казначейских облигаций США это привело к общему снижению доходностей и хорошему росту цен облигаций. Снижением доходностей и высоким аппетитом со стороны инвесторов поспешили воспользоваться эмитенты, в том числе суверенные. В июне на рынок вышла РФ с предложением 10-летних и 30-летних бумаг. Хотя размещение произошло уже после введения новых санкций в отношении России, спрос все равно превысил предложение. Но самым показательным было размещение 100-летних долларовых бумаг Аргентиной. Помимо того, что облигации подобной длины несут в себе высокий процентный риск, кредитная история страны небезупречная. Тем не менее спрос более чем в 3,5 раза превысил предложение. Все это свидетельствует, на наш взгляд, уже о некоторой перегретости рынка. Поэтому мы придерживаемся осторожного подхода в выборе инструментов для инвестирования. В большей мере акцент делается на облигации понятного кредитного качества с покупкой к погашению по адекватной доходности или на «специальные» идеи. Примером «специальных» идей в настоящее время являются просевшие облигации нефтегазовых компаний.</p>
-                                            </td>
-                                          </tr>
-                                        </table>                                                                              
-                                      </td>
-                                    </tr>
-                                  </table>
-
-                                </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                <!-- ГЛОБАЛЬНЫЕ ИНВЕСТИЦИОННЫЕ ИДЕИ -->
-
-			        <section>
-                                  <table class="reveal">
-                                    <tr>
-                                      <td vertical-align="middle" valign="middle" height="50px">
-                                        <h6>ГЛОБАЛЬНЫЕ ИНВЕСТИЦИОННЫЕ ИДЕИ</h6>
-                                      </td>
-
-                                      <td height="50px" vertical-align="middle" valign="middle" style="text-align:right;">
-                                        <img src="images/sberbankpb_header.png" alt="Mountain View" style="width:112px;height:32px;">
-                                      </td>                                
-                                    </tr>
-                                    <tr>
-                                      <td style="padding-top:0.1em;padding-bottom:0.1em;"><h5 style="font-size:16px">Акции нефтегазовых компаний</h5>
-                                      </td>
-                                      <td style="padding-top:0.1em;padding-bottom:0.1em;"><h5 style="font-size:16px">Акции американских банков</h5>
-                                      </td>                                      
-                                      
-                                    </tr>
-
-
-                                    <tr>
-                                      <td width="50%" style="padding-top:0.1em;padding-bottom:0.1em;">
-                                        <p style="font-size:14px">Мы видим интересные дивидендные истории в акциях эмитентов нефтегазового сектора с глобальным присутствием. Внутри сегмента мы выделяем компании со стабильно высоким свободным денежным потоком, который позволяет сохранить и нарастить дивиденды. Падение цен на нефть привело к появлению возможностей для покупки бумаг.</p>
-                                      </td>
-
-                                      <td width="50%" style="padding-top:0.1em;padding-bottom:0.1em;">
-                                        <p style="font-size:14px">Позитивная оценка перспектив американской экономики оказывает поддержку котировкам американских банков, хотя и не находит пока отражения в динамике доходности КО США. Обычно рост процентных ставок приводит к увеличению чистой процентной маржи у банков.</p>
-                                      </td>                                      
-
-                                    </tr>
-
-                                    
-                                    <tr>
-                                      <td width="50%" style="border-bottom:white;"><canvas id="globaloil" width="100px" height="100px"></canvas></td>
-
-
-                                      <td width="50%" style="border-bottom:white;"><canvas id="usbanks" width="100px" height="100px"></canvas></td>
-                                    </tr>
-
-                                    
-                                    <tr>
-                                      <td width="50%" style="border-bottom:white;"></td>
-                                      <td width="50%" style="text-align:center;"><h6>Источник: Bloomberg</h6></td>
-                                    </tr>
-
-                                    <tr>
-                                      <td width="50%">
-
-                                      </td>
-
-
-                                    </tr>                            
-
-                                  </table>
-                                </section>                                
 			</div>
 		</div>
 
@@ -542,158 +646,339 @@
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+                                        // Zoom in and out with Alt+click
+                                        { src: 'plugin/zoom-js/zoom.js', async: true },
+
+                                        // Speaker notes
+                                        { src: 'plugin/notes/notes.js', async: true },
+
+                                        // MathJax
+                                        { src: 'plugin/math/math.js', async: true }                                  
 				]
 			});
 		</script>
+                <script>
+                 var chart = c3.generate({
+                   bindto: '#fedbalance',
+                   size: {
+                     height: 400,
+                     width: 600
+                   },
+                   legend: {
+                     show: true,
+                     position: 'right'
+                   },
+                   data: {
+                     labels: false,
+                     columns: [
+                       ['Баланс ФРС', 894254,
+                        894621,
+                        2241343,
+                        2027584,
+                        2237500,
+                        2334346,
+                        2423562,
+                        2869325,
+                        2928585,
+                        2865757,
+                        2907300,
+                        3478672,
+                        4032575,
+                        4368348,
+                        4497660,
+                        4495055,
+                        4486587,
+                        4466482,
+                        4451451,
+                        4463347]
+                     ],
+                     axes: {
+                       data2: 'balance'
+                     }                     
+                   },
+                   axis: {
+                     x: {
+                       height: 70,
+                       inner: true,
+                       label: 'Месяц',
+                       type: 'category',
+                       categories: ['дек 07', 'июнь 08', 'дек 08', 'июн 09', 'дек 09', 'июн 10', 'дек 10', 'июн 11', 'дек 11', 'июн 12', 'дек 12', 'июн 13', 'дек 13', 'июн 14', 'дек 14', 'июн 15', 'дек 15', 'июн 16', 'дек 16', 'июн 17'],
+                       tick: {
+                         //culling: {
+                         //  max: 12
+                         //},
+                         //fit: true,
+                         //outer: true,
+                         rotate: -0,
+                       }
+                     },
+                     y: {
+                       label: 'Млн. долл.США',
+                       tick: {
+                         format: d3.format(',')
+                       },
+                     }                     
+                   }
+                 });                 
+                </script>
+
 
 
 
                 <script>
-                 var config1 = {
-                   type: 'line',
-                   data: {
-                     labels: ["дек 07", "июнь 08", "дек 08", "июн 09", "дек 09", "июн 10", "дек 10", "июн 11", "дек 11", "июн 12", "дек 12", "июн 13", "дек 13", "июн 14", "дек 14", "июн 15", "дек 15", "июн 16", "дек 16", "июн 17"],
-                     datasets: [{
-                       label: "Balance",
-                       fill: false,
-                       backgroundColor: window.chartColors.blue,
-                       borderColor: window.chartColors.blue,
-                       data: [
-                         894254,
-                         894621,
-                         2241343,
-                         2027584,
-                         2237500,
-                         2334346,
-                         2423562,
-                         2869325,
-                         2928585,
-                         2865757,
-                         2907300,
-                         3478672,
-                         4032575,
-                         4368348,
-                         4497660,
-                         4495055,
-                         4486587,
-                         4466482,
-                         4451451,
-                         4463347
-                       ],
-                     }]
+                 var chart = c3.generate({
+                   bindto: '#useurostocks',
+                   size: {
+                     height: 400,
+                     width: 600
                    },
-                   options: {
-                     responsive: true,
-                     title:{
-                       display:true,
-                       text:'Баланс Федрезерва, трлн. долл. США'
-                     },
-                     tooltips: {
-                       mode: 'index',
-                       intersect: false,
-                     },
-                     hover: {
-                       mode: 'nearest',
-                       intersect: true
-                     },
-                     scales: {
-                       xAxes: [{
-                         display: true,
-                         scaleLabel: {
-                           display: true,
-                           labelString: 'Month'
-                         }
-                       }],
-                       yAxes: [{
-                         display: true,
-                         scaleLabel: {
-                           display: true,
-                           labelString: 'Value'
-                         }
-                       }]
-                     }
-                   }
-                 };                 
-                 var config2 = {
-                   type: 'line',
-                   data: {
-                     labels: ["дек 07", "июнь 08", "дек 08", "июн 09", "дек 09", "июн 10", "дек 10", "июн 11", "дек 11", "июн 12", "дек 12", "июн 13", "дек 13", "июн 14", "дек 14", "июн 15", "дек 15", "июн 16", "дек 16", "июн 17"],
-                     datasets: [{
-                       label: "Balance",
-                       fill: false,
-                       backgroundColor: window.chartColors.blue,
-                       borderColor: window.chartColors.blue,
-                       data: [
-                         894254,
-                         894621,
-                         2241343,
-                         2027584,
-                         2237500,
-                         2334346,
-                         2423562,
-                         2869325,
-                         2928585,
-                         2865757,
-                         2907300,
-                         3478672,
-                         4032575,
-                         4368348,
-                         4497660,
-                         4495055,
-                         4486587,
-                         4466482,
-                         4451451,
-                         4463347
-                       ],
-                     }]
+                   legend: {
+                     show: true,
+                     position: 'inset'
                    },
-                   options: {
-                     responsive: true,
-                     title:{
-                       display:true,
-                       text:'Баланс Федрезерва, трлн. долл. США'
+                   data: {
+                     labels: false,
+                     columns: [
+                       ['S&P 500', 100.0,
+                        105.76,
+                        104.70,
+                        115.20,
+                        117.92,
+                        123.45,
+                        135.69,
+                        137.45,
+                        143.91,
+                        144.79,
+                        151.15,
+                        151.81,
+                        151.46,
+                        140.95,
+                        150.05,
+                        151.21,
+                        154.08,
+                        159.18,
+                        164.36,
+                        173.45,
+                        177.91,],
+                       ['EURO STOXX50', 100.0,
+                        108.37,
+                        116.39,
+                        115.87,
+                        114.92,
+                        127.75,
+                        137.28,
+                        139.60,
+                        142.54,
+                        142.44,
+                        138.93,
+                        163.26,
+                        151.20,
+                        136.91,
+                        144.28,
+                        132.68,
+                        126.49,
+                        132.57,
+                        145.29,
+                        154.59,
+                        151.98,]
+                     ],
+                     axes: {
+                       data2: 'balance'
+                     }                     
+                   },
+                   axis: {
+                     x: {
+                       height: 50,
+                       inner: true,
+                       label: 'Месяц',
+                       type: 'category',
+                       categories: ['июн 12', 'сен 12', 'дек 12', 'мар 13', 'июн 13', 'сен 13', 'дек 13', 'мар 14', 'июн 14', 'сен 14', 'дек 14', 'мар 15', 'июн 15', 'сен 15', 'дек 15', 'мар 16', 'июн 16', 'сен 16', 'дек 16', 'мар 17', 'июн 17'],
+                       tick: {
+                         //fit: true,
+                         //outer: true,
+                         //rotate: 90,
+                       }
                      },
-                     tooltips: {
-                       mode: 'index',
-                       intersect: false,
-                     },
-                     hover: {
-                       mode: 'nearest',
-                       intersect: true
-                     },
-                     scales: {
-                       xAxes: [{
-                         display: true,
-                         scaleLabel: {
-                           display: true,
-                           labelString: 'Month'
-                         }
-                       }],
-                       yAxes: [{
-                         display: true,
-                         scaleLabel: {
-                           display: true,
-                           labelString: 'Value'
-                         }
-                       }]
-                     }
+                     y: {
+                       label: '%'
+                     }                     
                    }
-                 };
-
-                 window.onload = function() {
-                   var ctx1 = document.getElementById("canvas").getContext("2d");
-                   window.myLine = new Chart(ctx1, config1);
-
-                   var ctx2 = document.getElementById("eurousaeq").getContext("2d");
-                   window.myLine = new Chart(ctx2, config2);
-
-                   var ctx3 = document.getElementById("usbanks").getContext("2d");
-                   window.myLine = new Chart(ctx3, config2);
-
-                   var ctx4 = document.getElementById("globaloil").getContext("2d");
-                   window.myLine = new Chart(ctx4, config2);                                                         
-                 };
+                 });                 
                 </script>                
+
+
+                
 	</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+     Using Charts.js sample
+     <script>
+     var config1 = {
+     type: 'line',
+     data: {
+     labels: ["дек 07", "июнь 08", "дек 08", "июн 09", "дек 09", "июн 10", "дек 10", "июн 11", "дек 11", "июн 12", "дек 12", "июн 13", "дек 13", "июн 14", "дек 14", "июн 15", "дек 15", "июн 16", "дек 16", "июн 17"],
+     datasets: [{
+     label: "Balance",
+     fill: false,
+     backgroundColor: window.chartColors.blue,
+     borderColor: window.chartColors.blue,
+     data: [
+     894254,
+     894621,
+     2241343,
+     2027584,
+     2237500,
+     2334346,
+     2423562,
+     2869325,
+     2928585,
+     2865757,
+     2907300,
+     3478672,
+     4032575,
+     4368348,
+     4497660,
+     4495055,
+     4486587,
+     4466482,
+     4451451,
+     4463347
+     ],
+     }]
+     },
+     options: {
+     responsive: true,
+     title:{
+     display:true,
+     text:'Баланс Федрезерва, трлн. долл. США'
+     },
+     tooltips: {
+     mode: 'index',
+     intersect: false,
+     },
+     hover: {
+     mode: 'nearest',
+     intersect: true
+     },
+     scales: {
+     xAxes: [{
+     display: true,
+     scaleLabel: {
+     display: true,
+     labelString: 'Month'
+     }
+     }],
+     yAxes: [{
+     display: true,
+     scaleLabel: {
+     display: true,
+     labelString: 'Value'
+     }
+     }]
+     }
+     }
+     };                 
+     var config2 = {
+     type: 'line',
+     data: {
+     labels: ["дек 07", "июнь 08", "дек 08", "июн 09", "дек 09", "июн 10", "дек 10", "июн 11", "дек 11", "июн 12", "дек 12", "июн 13", "дек 13", "июн 14", "дек 14", "июн 15", "дек 15", "июн 16", "дек 16", "июн 17"],
+     datasets: [{
+     label: "Balance",
+     fill: false,
+     backgroundColor: window.chartColors.blue,
+     borderColor: window.chartColors.blue,
+     data: [
+     894254,
+     894621,
+     2241343,
+     2027584,
+     2237500,
+     2334346,
+     2423562,
+     2869325,
+     2928585,
+     2865757,
+     2907300,
+     3478672,
+     4032575,
+     4368348,
+     4497660,
+     4495055,
+     4486587,
+     4466482,
+     4451451,
+     4463347
+     ],
+     }]
+     },
+     options: {
+     responsive: true,
+     title:{
+     display:true,
+     text:'Баланс Федрезерва, трлн. долл. США'
+     },
+     tooltips: {
+     mode: 'index',
+     intersect: false,
+     },
+     hover: {
+     mode: 'nearest',
+     intersect: true
+     },
+     scales: {
+     xAxes: [{
+     display: true,
+     scaleLabel: {
+     display: true,
+     labelString: 'Month'
+     }
+     }],
+     yAxes: [{
+     display: true,
+     scaleLabel: {
+     display: true,
+     labelString: 'Value'
+     }
+     }]
+     }
+     }
+     };
+
+     window.onload = function() {
+     var ctx1 = document.getElementById("canvas").getContext("2d");
+     window.myLine = new Chart(ctx1, config1);
+
+     var ctx2 = document.getElementById("eurousaeq").getContext("2d");
+     window.myLine = new Chart(ctx2, config2);
+
+     var ctx3 = document.getElementById("usbanks").getContext("2d");
+     window.myLine = new Chart(ctx3, config2);
+
+     var ctx4 = document.getElementById("globaloil").getContext("2d");
+     window.myLine = new Chart(ctx4, config2);                                                         
+     };
+     </script>   
+-->
