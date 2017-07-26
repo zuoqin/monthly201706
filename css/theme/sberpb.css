@@ -91,6 +91,22 @@ body {
 .reveal h1 {
   text-shadow: none; }
 
+
+.reveal .logo-and-login #logo {
+  display: block;
+  background: url("../../images/logo.png") 0 0 no-repeat;
+  background-size: contain;
+  width: 128px;
+  height: 33px;
+  float: right;
+  text-decoration: none;
+}
+
+.reveal .tdlogo {
+  text-align:right;
+  background: #4b4a4a;
+  }
+
 /*********************************************
  * OTHER
  *********************************************/
